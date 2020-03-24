@@ -3,3 +3,5 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :days do
     resources :bookings, only: [:new, :create, :edit, :update, :destroy]
+  end
+end
