@@ -1,3 +1,15 @@
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+
+@import "components/index";
+/*@import "pages/index";*/
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -13,3 +25,15 @@
  *= require_tree .
  *= require_self
  */
+ .content {
+  min-height: calc(100vh - 80px);
+  margin-bottom: 2.5rem;
+}
+
+.absolute-0-0 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
