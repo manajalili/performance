@@ -1,5 +1,9 @@
+<%= link_to "Home", root_path, class: "btn btn-info" %>
+<div>
 <% @days.each do |day| %>
-<%= day.date %>
-<%= day.title %>
-<% end %>
+  <%= link_to day_path(day) do %>
+    <%= day.date %>
+    <%= day.title %>
+  <% end %>
+<% end %></div>
 <%= link_to "Create", new_day_path, class: "btn btn-success" %>
