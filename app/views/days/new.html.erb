@@ -1,0 +1,6 @@
+<%= simple_form_for(@day) do |f| %>
+  <%= f.input :date %>
+  <%= f.input :title %>
+  <%= f.button :submit, class: "btn btn-warning" %>
+<% end %>
+<%= link_to "Back", days_path, class: "btn btn-primary" %>
