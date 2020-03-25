@@ -1,20 +1,16 @@
-.homepage {
-  background-size: cover;
-  background-position: center;
-  padding: 150px 0;
-}
-
-.homepage h1 {
-  margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  font-weight: bold;
-}
-
-.homepage p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+.homepage-form {
+  text-align: center;
+  width: 57%;
+  display: inline-flex;
+  padding: 0 25px;
+  .select2-container {
+    flex-grow: 2;
+  }
+  .select2-selection--single {
+    height: 40px !important;
+    & > * {
+      line-height: 40px !important;
+      height: 40px !important;
+    }
+  }
 }
