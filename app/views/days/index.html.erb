@@ -4,6 +4,7 @@
   <%= link_to day_path(day) do %>
     <%= day.date %>
     <%= day.title %>
+    <%= link_to "Edit", edit_day_path(day) %>
   <% end %>
 <% end %></div>
 <%= link_to "Create", new_day_path, class: "btn btn-success" %>
