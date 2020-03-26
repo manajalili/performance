@@ -2,9 +2,10 @@
 <div>
 <% @days.each do |day| %>
   <%= link_to day_path(day) do %>
-    <%= day.date %>
-    <%= day.title %>
+   <p><%= day.date %>
+    <%= day.title %></p>
     <%= link_to "Edit", edit_day_path(day) %>
+    <%= link_to "Remove", day_path(day), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-ghost" %>
   <% end %>
 <% end %></div>
 <%= link_to "Create", new_day_path, class: "btn btn-success" %>
