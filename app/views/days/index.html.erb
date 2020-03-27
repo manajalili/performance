@@ -1,5 +1,5 @@
 <div class="index">
-  <%= link_to "Home", root_path, class: "btn btn-info" %>
+  <%= link_to "Home", root_path, class: "btn btn-ghost-gray" %>
 
   <% @days.each do |day| %>
    <div class="card"> <%= link_to day_path(day) do %>
@@ -10,5 +10,5 @@
       </div>
     <% end %>
   <% end %></div>
-  <%= link_to "Create", new_day_path, class: "btn btn-success" %>
+  <%= link_to "Create", new_day_path, class: "btn-orange" %>
   </div>
