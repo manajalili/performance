@@ -1,5 +1,4 @@
 <div class="index">
-  <%= link_to "Home", root_path, class: "btn btn-ghost-gray" %>
     <% @days.each do |day| %>
      <div class="card"> <%= link_to day_path(day) do %>
         <p class="indextext"><%= day.date %>
