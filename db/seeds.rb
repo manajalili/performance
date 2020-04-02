@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Activity.create(name: "Yoga")
+Activity.create(name: "Walking")
+Activity.create(name: "Cooking")
+Activity.create(name: "Cleaning")
+Activity.create(name: "Coding")
+Activity.create(name: "Workout")
+Activity.create(name: "Calling Friends")
+Activity.create(name: "Shopping")
