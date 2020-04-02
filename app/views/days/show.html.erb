@@ -1,3 +1,11 @@
 <h6><%= @day.date %></h6>
 <h6><%= @day.title %></h6>
+
+<div><p>Bookings</p>
+<% @bookings.each do |booking| %>
+<%= booking.activity.name %>
+<%= booking.duration %>
+<%= booking.activity.description %>
+<% end %>
+</div>
 <%= link_to "Back", days_path, class: "btn btn-primary" %>
