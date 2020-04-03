@@ -5,6 +5,7 @@ class DaysController < ApplicationController
 
   def show
     @day = Day.find(params[:id])
+    @bookings = @day.bookings
   end
 
   def new
