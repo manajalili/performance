@@ -3,6 +3,7 @@
     <div class="col-md-6 mx-auto">
       <%= simple_form_for [ @day, @booking ] do |f| %>
         <%= f.association :activity, input_html: { class: "beautiful-dropdown" } %>
+        <%= f.input :notes %>
         <%= f.input :duration %>
         <%= f.input :photos, as: :file, input_html: { multiple: true } %>
         <%= f.submit "Submit", class: "btn-pink" %>
