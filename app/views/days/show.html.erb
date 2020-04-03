@@ -1,9 +1,16 @@
-<h6><%= @day.date %></h6>
-<h6><%= @day.title %></h6>
-
-<% @bookings.each do |booking| %>
-<%= booking.activity.name %> <%= booking.duration %> hrs <%= link_to "Remove", day_path(@day), method: :delete, class: "btn-ghost" %>
-<% end %>
-
-<%= link_to "Activity", new_day_booking_path(@day), class: "btn-pink" %>
-<%= link_to "Back", days_path, class: "btn btn-primary" %>
+<div class="container">
+  <div class="row my-5">
+    <div class="col-6">
+      <h6><%= @day.date %></h6>
+      <h6><%= @day.title %></h6>
+      <p>Activities</p>
+      <% @bookings.each do |booking| %>
+      <%= booking.activity.name %> <%= booking.duration %> hrs <%= link_to "Remove", day_path(@day), method: :delete, class: "btn-ghost-gray" %>
+      <% end %>
+      <div class= "my-4">
+      <%= link_to "Activity", new_day_booking_path(@day), class: "btn-pink" %>
+      <%= link_to "Back", days_path, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>
