@@ -2,7 +2,7 @@
 <h6><%= @day.title %></h6>
 
 <% @bookings.each do |booking| %>
-<%= booking.activity.name %> <%= booking.duration %> hrs
+<%= booking.activity.name %> <%= booking.duration %> hrs <%= link_to "Remove", day_path(@day), method: :delete, class: "btn-ghost" %>
 <% end %>
 
 <%= link_to "Activity", new_day_booking_path(@day), class: "btn-pink" %>
