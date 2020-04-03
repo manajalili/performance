@@ -1,0 +1,6 @@
+
+<%= simple_form_for [ @day, @booking ] do |f| %>
+  <%= f.input :activity, collection: ["Yoga", "Cooking", "Walking", "Coding", "Shopping"] %>
+  <%= f.input :duration %>
+  <%= f.submit "Submit", class: "btn-pink" %>
+<% end %>
