@@ -1,6 +1,12 @@
-
-<%= simple_form_for [ @day, @booking ] do |f| %>
-  <%= f.input :activity, collection: ["Yoga", "Cooking", "Walking", "Coding", "Shopping"] %>
-  <%= f.input :duration %>
-  <%= f.submit "Submit", class: "btn-pink" %>
-<% end %>
+ <div class="container">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <%= simple_form_for [ @day, @booking ] do |f| %>
+        <%= f.input :activity, collection: ["Yoga", "Cooking", "Walking", "Coding", "Shopping", "Talking with Friends"] %>
+        <%= f.input :duration %>
+        <%= f.submit "Submit", class: "btn-pink" %>
+      <% end %>
+       <%= link_to "Back", day_path(@day), class: "btn-ghost-gray" %>
+    </div>
+  </div>
+</div>
