@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-6 mx-auto">
       <%= simple_form_for [ @day, @booking ] do |f| %>
-        <%= f.input :activity, collection: ["Yoga", "Cooking", "Walking", "Coding", "Shopping", "Talking with Friends"] %>
+        <%= f.input :activity, collection: ["Yoga", "Cooking", "Walking", "Coding", "Shopping", "Calling Friends", "Cleaning", "Working out"] %>
         <%= f.input :duration %>
         <%= f.submit "Submit", class: "btn-pink" %>
       <% end %>
