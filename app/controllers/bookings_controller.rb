@@ -5,7 +5,7 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(:bookingparams)
+    @booking = Booking.new(bookingparams)
     @day = Day.find(params[:day_id])
     @booking.day = @day
     if @booking.save

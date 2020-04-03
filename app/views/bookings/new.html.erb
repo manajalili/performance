@@ -1,0 +1,12 @@
+ <div class="container">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <%= simple_form_for [ @day, @booking ] do |f| %>
+        <%= f.association :activity, input_html: { class: "beautiful-dropdown" } %>
+        <%= f.input :duration %>
+        <%= f.submit "Submit", class: "btn-pink" %>
+      <% end %>
+       <%= link_to "Back", day_path(@day), class: "btn-ghost-gray" %>
+    </div>
+  </div>
+</div>
