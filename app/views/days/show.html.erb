@@ -6,11 +6,10 @@
     <% @bookings.each do |booking| %>
   <div class="row border mx-1 my-3 py-2 px-2">
     <div class= "col-8">
-      <p><%= booking.activity.name %> <%= booking.duration %> hrs  <%= link_to "Remove", day_path(@day), method: :delete, class: "mx-3" %></p>
-      <% end %>
+      <p><%= booking.activity.name %> - <%= booking.duration %> hrs  <%= link_to "Remove", day_path(@day), method: :delete, class: "mx-3" %></p>
     </div>
   </div>
-
+     <% end %>
       <% @day.photos.each do |photo| %>
         <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
       <% end %>
