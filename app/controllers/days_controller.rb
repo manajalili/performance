@@ -1,6 +1,6 @@
 class DaysController < ApplicationController
   def index
-    @days = Day.all
+    @days = Day.all.order("created_at ASC")
   end
 
   def show
