@@ -1,6 +1,6 @@
 class DaysController < ApplicationController
   def index
-    @days = Day.all
+    @days = Day.all.order("date DESC")
   end
 
   def show
@@ -44,6 +44,6 @@ class DaysController < ApplicationController
   private
 
   def day_params
-    params.require(:day).permit(:date, :title)
+    params.require(:day).permit(:date, :title, photos: [])
   end
 end

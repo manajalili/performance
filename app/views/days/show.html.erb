@@ -1,14 +1,18 @@
 <div class="container px-0 my-3">
-  <div class="col-8">
-    <h4><strong> <%= @day.title.capitalize %></strong></h4>
-    <h5><%= @day.date %></h6>
-  </div>
-  <div class="row border mx-1 my-3 py-2 px-2">
-    <p>Activities</p>
+  <h4><strong> <%= @day.title.capitalize %></strong></h4>
+  <h5><%= @day.date %></h6>
+  <br>
+  <h3>Activities</h3>
     <% @bookings.each do |booking| %>
-    <%= booking.activity.name %> <%= booking.duration %> hrs  <%= link_to "Remove", day_path(@day), method: :delete, class: "mx-3" %>
+      <div class="row border mx-1 my-3 py-2 px-2">
+        <div class= "col-8">
+          <p><%= booking.activity.name %> - <%= booking.duration %> hrs  <%= link_to "Remove", booking_path(booking), method: :delete, class: "mx-3" %></p>
+        </div>
+      </div>
+         <% end %>
+    <% @day.photos.each do |photo| %>
+      <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
     <% end %>
-  </div>
 
   <div class= "my-4">
     <%= link_to "Activity", new_day_booking_path(@day), class: "btn-pink" %>
