@@ -3,7 +3,7 @@
      <div class="card"> <%= link_to day_path(day) do %>
         <p class="indextext"><%= day.date %>
         <%= day.title %>
-        <%= day.address %> <%= day.latitude %> <%= day.longitude %> </p>
+        <%= day.address %> </p>
         <div> <%= link_to "Edit", edit_day_path(day), class: "btn-pink" %>
         <%= link_to "Remove", day_path(day), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-ghost-gray" %>
         </div>
