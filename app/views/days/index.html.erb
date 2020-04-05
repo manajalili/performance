@@ -2,7 +2,8 @@
     <% @days.each do |day| %>
      <div class="card"> <%= link_to day_path(day) do %>
         <p class="indextext"><%= day.date %>
-        <%= day.title %></p>
+        <%= day.title %>
+        <%= day.address %> <%= day.latitude %> <%= day.longitude %> </p>
         <div> <%= link_to "Edit", edit_day_path(day), class: "btn-pink" %>
         <%= link_to "Remove", day_path(day), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-ghost-gray" %>
         </div>
@@ -10,3 +11,10 @@
     <% end %>
     <%= link_to "Create", new_day_path, class: "btn-pink" %>
 </div>
+
+<div id="map"
+     style="width: 100%;
+     height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
