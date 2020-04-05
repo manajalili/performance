@@ -1,6 +1,14 @@
 class DaysController < ApplicationController
   def index
     @days = Day.all.order("date DESC")
+    @days = Day.geocoded
+
+    @markers = @days.map do |day|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
   end
 
   def show
