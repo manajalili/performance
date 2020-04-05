@@ -17,3 +17,10 @@
 import 'bootstrap';
 
 console.log('Hello World from Webpacker')
+
+
+import { initMapbox } from '../plugins/init_mapbox';
+
+document.addEventListener('turbolinks:load', () => {
+  initMapbox();
+})
