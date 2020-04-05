@@ -5,8 +5,9 @@ class DaysController < ApplicationController
 
     @markers = @days.map do |day|
       {
-        lat: flat.latitude,
-        lng: flat.longitude
+        lat: day.latitude,
+        lng: day.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { day: day })
       }
     end
   end
