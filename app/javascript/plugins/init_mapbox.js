@@ -37,6 +37,7 @@ if (mapElement) {
   fitMapToMarkers(map, markers);
 }
 
+
 const addMarkersToMap = (map, markers) => {
   markers.forEach((marker) => {
     const popup = new mapboxgl.Popup().setHTML(marker.infoWindow); // add this
@@ -56,8 +57,3 @@ if (mapElement) {
   map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
                                       mapboxgl: mapboxgl }));
 }
-
-const map = new mapboxgl.Map({
-  container: 'map',
-  style: 'mapbox://styles/pdunleav/cjofefl7u3j3e2sp0ylex3cyb' // <-- use your own!
-});
