@@ -9,7 +9,6 @@ class DaysController < ApplicationController
         infoWindow: render_to_string(partial: "info_window", locals: { day: day })
       }
     end
-    @geocoded_days = @days.geocoded
     @days = Day.all.order("date DESC")
   end
 

@@ -1,15 +1,11 @@
-// .mapboxgl-popup {
-//   max-width: 200px;
-//   color:black;
-// }
+.mapboxgl-popup {
+  max-width: 200px;
+}
 
-// .mapboxgl-popup-content {
-//   text-align: center;
-//   font-family: 'Rubik';
-//   font-weight: 700;
-//   color: black;
-//   text-align: left;
-// }
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
 
 .mapboxgl-canvas {
   height: 800px;
