@@ -1,6 +1,5 @@
 class DaysController < ApplicationController
   def index
-    @days = Day.all.order("date DESC")
     @days = Day.geocoded
 
     @markers = @days.map do |day|
@@ -10,6 +9,7 @@ class DaysController < ApplicationController
         infoWindow: render_to_string(partial: "info_window", locals: { day: day })
       }
     end
+    @days = Day.all.order("date DESC")
   end
 
   def show
