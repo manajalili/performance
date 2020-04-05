@@ -53,6 +53,6 @@ class DaysController < ApplicationController
   private
 
   def day_params
-    params.require(:day).permit(:date, :title, photos: [])
+    params.require(:day).permit(:date, :title, :address, photos: [])
   end
 end

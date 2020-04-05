@@ -9,18 +9,21 @@ gem 'rails', '~> 5.2.4', '>= 5.2.4.2'
 gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
+gem 'geocoder'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker'
-gem 'geocoder'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'
+gem 'jquery-rails'
+gem 'gmaps-autocomplete-rails'
 
 
 # Use CoffeeScript for .coffee assets and views
