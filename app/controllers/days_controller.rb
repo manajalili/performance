@@ -9,7 +9,7 @@ class DaysController < ApplicationController
         infoWindow: render_to_string(partial: "info_window", locals: { day: day })
       }
     end
-    @days = Day.all.order("date DESC")
+    # @days = Day.all.order("date DESC")
   end
 
   def show
