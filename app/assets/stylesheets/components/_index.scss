@@ -15,6 +15,11 @@ a {
   display: flex;
 }
 
-body {
-  padding-top: 65px;
+.content {
+  min-height: calc(100vh - 80px);
+  margin-bottom: 2.5rem;
+}
+
+.container {
+  padding-top: 75px;
 }
