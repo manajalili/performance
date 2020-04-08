@@ -3,7 +3,7 @@
     <div class="col-8">
       <h1>Modify the magic day</h1>
       <%= simple_form_for(@day) do |f| %>
-        <%= f.input :date %>
+        <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
         <%= f.input :title %>
         <%= f.input :address %>
         <%= f.button :submit, class: "btn btn-warning" %>
