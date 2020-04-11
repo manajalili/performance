@@ -1,7 +1,7 @@
 <div class="index">
   <% @days.each do |day| %>
    <div class="card"> <%= link_to day_path(day) do %>
-      <p class="indextext"><%= day.date %>
+      <p class="indextext"><%= day.date %> -
       <%= day.title %>
       <%= day.address %> </p>
       <% Booking.joins(:day).where(day: @day).each do |booking| %>
