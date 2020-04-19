@@ -16,10 +16,17 @@
 </div>
 
 
-<div id="map"
-     style="width: 100%;
-     height: 600px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  <form action="" id="location" style="width:400px; margin:0 auto;">
+    <input type="text" name="content" id="city" class="form-control" placeholder="Type the city..">
+    <input type="submit" value="Send" class="btn btn-primary">
+    <select id="city-input" class="select2"></select>
+  </form>
+  <div class="border" style="width:400px; margin:0 auto;">
+    <h1 id="header1"> </h1>
+    <h4 id="header4"></h4>
+    <p id="parag"></p>
+    <img id='image'>
+  </div>
+    <script src="weather.js"></script>
 
 
