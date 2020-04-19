@@ -1,25 +1,37 @@
-<div class="index">
-  <% @days.each do |day| %>
-   <div class="card"> <%= link_to day_path(day) do %>
-      <p class="indextext"><%= day.date %> -
-      <%= day.title %>
-      <%= day.address %> </p>
-      <% Booking.joins(:day).where(day: @day).each do |booking| %>
-      <p> <%= booking.activity.name %></p>
-      <% end %>
-      <div> <%= link_to "Edit", edit_day_path(day), class: "btn-pink" %>
-      <%= link_to "Remove", day_path(day), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-ghost-gray" %>
+<div class="items">
+  <div class="index">
+    <% @days.each do |day| %>
+     <div class="card"> <%= link_to day_path(day) do %>
+        <p class="indextext"><%= day.date %> -
+        <%= day.title %>
+        <%= day.address %> </p>
+        <% Booking.joins(:day).where(day: @day).each do |booking| %>
+        <p> <%= booking.activity.name %></p>
+        <% end %>
+        <div> <%= link_to "Edit", edit_day_path(day), class: "btn-pink" %>
+        <%= link_to "Remove", day_path(day), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-ghost-gray" %>
+        </div>
+      <% end %></div>
+    <% end %>
+    <%= link_to "Create", new_day_path, class: "btn-main" %>
+  </div>
+
+  <div class="weather">
+    <form action="" id="location" style="width:400px; margin:0 auto;">
+      <input type="text" name="content" id="city" class="form-control" placeholder="Type the city..">
+      <input type="submit" value="Send" class="btn-main">
+      <select id="city-input" class="select2"></select>
+    </form>
+    <div class="weather-info">
+      <div >
+        <h1 id="header1"> </h1>
+        <h4 id="header4"></h4>
+        <p id="parag"></p>
+        <p id="feelslike">Feels Like</p>
       </div>
-    <% end %></div>
-  <% end %>
-  <%= link_to "Create", new_day_path, class: "btn-main" %>
+      <div>
+        <img id='image'>
+      </div>
+    </div>
+  </div>
 </div>
-
-
-<div id="map"
-     style="width: 100%;
-     height: 600px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-
-

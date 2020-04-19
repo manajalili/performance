@@ -8,5 +8,20 @@
   color: gray;
   font-size: 22px;
   text-decoration: none;
+}
 
+.items {
+  display: flex;
+}
+
+.weather {
+  margin-top: 90px;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 50px;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: space-between;
 }
