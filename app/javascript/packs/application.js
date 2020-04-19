@@ -30,4 +30,4 @@ initMapbox();
 initAutocomplete();
 initDetectLocation();
 initFlatpickr();
-toggleMap();
+
