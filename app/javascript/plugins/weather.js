@@ -5,8 +5,7 @@ const image = document.querySelector("#image");
 const location = document.querySelector("#header1");
 const weather = document.querySelector("#header4");
 const temprature = document.querySelector("#parag");
-const sunrise = document.querySelector("#sunrise");
-const sunset = document.querySelector("#sunset");
+const feelslike = document.querySelector("#feelslike");
 
 form.addEventListener("submit", (e) => {
   console.log(city.value);
@@ -20,6 +19,6 @@ form.addEventListener("submit", (e) => {
       weather.innerText = data.weather[0].description;
       temprature.innerText = data.main.temp;
       image.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-      sunrise.innerText = data.sys[3].sunrise;
+      feelslike.innerText = data.main.feels_like;
     });
 });
