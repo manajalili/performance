@@ -1,4 +1,4 @@
-import mapboxgl from 'mapbox-gl';
+// import mapboxgl from 'mapbox-gl';
 
 
 const location = document.querySelector('.list-unstyled');
@@ -30,4 +30,4 @@ form.addEventListener("submit", (e) => {
         .addTo(map);
     });
 });
-export { initMapbox };
+

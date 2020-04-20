@@ -19,10 +19,7 @@ import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the styleshe
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import "../plugins/flatpickr"
 import "../plugins/weather"
-import "../plugins/init_mapbox"
+import "../plugins/mapbox"
 
-initMapbox();
-initAutocomplete();
-initDetectLocation();
 initFlatpickr();
 
