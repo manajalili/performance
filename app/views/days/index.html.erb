@@ -2,9 +2,11 @@
   <div class="index">
     <% @days.each do |day| %>
      <div class="card"> <%= link_to day_path(day) do %>
-        <div class="first_line"><p class="indextext"><%= day.date %> -
-          <%= day.title %>
-          <%= day.address %> </p>
+        <div class="first_line">
+          <p class="indextext">
+            <%= day.title %> -
+            <%= day.address %></p>
+           <p class="date"><%= day.date %></p>
           <%= link_to '<i class="fas fa-times"></i>'.html_safe, day_path(day), method: :delete, data: {confirm: "Are you sure?"}, class: "x" %> </div>
         <% Booking.joins(:day).where(day: @day).each do |booking| %>
         <p> <%= booking.activity.name %></p>
