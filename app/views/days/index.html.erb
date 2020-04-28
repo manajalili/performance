@@ -9,7 +9,7 @@
         <p> <%= booking.activity.name %></p>
         <% end %>
         <div> <%= link_to "Edit", edit_day_path(day), class: "btn-pink" %>
-        <%= link_to "Remove", day_path(day), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-ghost-gray" %>
+          <%= link_to '<i class="fas fa-times"></i>'.html_safe, day_path(day), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-ghost-gray" %>
         </div>
       <% end %></div>
     <% end %>
