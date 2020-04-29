@@ -19,12 +19,13 @@
   padding-left: 30px;
   padding-right: 30px;
   height: 50px;
-  margin-left: 15px;
+  display:inline-block;
 }
 
 .weather-info {
   display: flex;
   justify-content: space-between;
+  display:inline-block;
 }
 
 .activities {
