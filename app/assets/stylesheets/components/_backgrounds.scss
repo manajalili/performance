@@ -2,6 +2,7 @@
  // background-color: #d7eae3;
  height: 100%;
  padding-top:90px;
+ margin-bottom: 20px;
 }
 
 .indextext{
@@ -19,18 +20,16 @@
   padding-left: 30px;
   padding-right: 30px;
   height: 50px;
-  display:inline-block;
 }
 
 .weather-info {
   display: flex;
   justify-content: space-between;
-  display:inline-block;
 }
 
 .activities {
   margin-top: 90px;
-  margin-left: 20px;
+  margin-left: 80px;
 }
 
 .pic {
