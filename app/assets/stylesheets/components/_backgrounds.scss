@@ -1,7 +1,7 @@
 .index {
  // background-color: #d7eae3;
  height: 100%;
- padding-top:90px;
+ padding-top:20px;
  margin-bottom: 20px;
 }
 
@@ -28,11 +28,25 @@
 }
 
 .activities {
-  margin-top: 90px;
   margin-left: 80px;
+  padding-top:20px;
 }
 
 .pic {
   margin-bottom: 10px;
   border-radius: 3px;
+}
+
+.whole {
+  padding-top: 80px;
+}
+
+.plus {
+  margin-left: 13px;
+  color: #e0a3ae;
+  font-size: 25px;
+}
+
+.plus:hover {
+  color: #e2919e;
 }
