@@ -1,6 +1,6 @@
  <div class="container">
   <div class="row">
-    <div class="col-md-6 mx-auto">
+    <div class="col-md-4 mx-auto">
       <%= simple_form_for [ @day, @booking ] do |f| %>
         <%= f.association :activity, input_html: { class: "beautiful-dropdown" } %>
         <%= f.input :notes %>
